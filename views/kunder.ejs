@@ -8,7 +8,7 @@
         th, td {
             border: 1px solid black;
             padding: 5px;
-            width: 50px;
+            width: 200px;
         }
     </style>
 </head>
@@ -20,7 +20,13 @@
             <th>Navn</th>
             <th>Epost</th>
         </tr>
-
+        <% for (let i = 0; i < data.length; i++) { %>
+        <tr>
+            <td><%= data[i].ID %></td>
+            <td><%= data[i].Navn %></td>
+            <td><%= data[i].Epost %></td>
+        </tr>
+        <% } %>
     </table>
 </body>
 </html>
